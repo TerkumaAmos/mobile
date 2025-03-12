@@ -16,14 +16,14 @@ class _FirstPageState extends State<FirstPage> {
       backgroundColor: Colors.white,
       appBar: AppBar(
         leading: Padding(
-          padding: const EdgeInsets.all(5),
+          padding: const EdgeInsets.only(left: 15, top: 5, bottom: 5),
           child: Container(
+            //   alignment: Alignment.centerLeft,
             // margin: EdgeInsets.all(1),
             child: const CircleAvatar(
-
-                //  radius: 200,
-
-                ),
+              radius: 28,
+              backgroundImage: AssetImage("assets/amos1.jpeg"),
+            ),
           ),
         ),
         title: Text(
