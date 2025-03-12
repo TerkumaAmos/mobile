@@ -15,16 +15,24 @@ class _FirstPageState extends State<FirstPage> {
     return Scaffold(
       backgroundColor: Colors.white,
       appBar: AppBar(
-        leading: Padding(
-          padding: const EdgeInsets.only(left: 15, top: 5, bottom: 5),
-          child: const CircleAvatar(
+        leading: const Padding(
+          padding: EdgeInsets.only(left: 15, top: 5, bottom: 5),
+          child: CircleAvatar(
             radius: 30,
             backgroundImage: AssetImage("assets/amos1.jpeg"),
           ),
         ),
-        title: const Text(
-          "Hi Stephaine \n Good Morning",
-          style: TextStyle(fontSize: 15),
+        title: const Column(
+          children: [
+            Text(
+              "Good Morning",
+              style: TextStyle(fontSize: 20),
+            ),
+            Text(
+              "T.E.C.H_uma",
+              style: TextStyle(fontWeight: FontWeight.bold),
+            )
+          ],
         ),
         actions: [
           Container(
