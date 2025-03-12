@@ -153,12 +153,12 @@ class _FirstPageState extends State<FirstPage> {
             children: [
               CardWithIcon(
                 icondata: Icons.lightbulb_outline,
-                text: 'Top Up',
+                text: 'Electricity',
               ),
-              CardWithIcon(icondata: Icons.wifi, text: 'Transfer'),
+              CardWithIcon(icondata: Icons.wifi, text: 'Internet'),
               CardWithIcon(
-                  icondata: Icons.confirmation_number, text: 'Request'),
-              CardWithIcon(icondata: Icons.favorite_border, text: 'Scan'),
+                  icondata: Icons.confirmation_number, text: 'Voucher'),
+              CardWithIcon(icondata: Icons.favorite_border, text: 'Assurance'),
             ],
           ),
           SizedBox(height: 30),
@@ -166,12 +166,12 @@ class _FirstPageState extends State<FirstPage> {
             mainAxisAlignment: MainAxisAlignment.spaceEvenly,
             children: [
               CardWithIcon(
-                icondata: Icons.account_balance_wallet,
-                text: 'Top Up',
+                icondata: Icons.water_drop,
+                text: 'Water',
               ),
-              CardWithIcon(icondata: Icons.swap_vert, text: 'Transfer'),
-              CardWithIcon(icondata: Icons.help, text: 'Request'),
-              CardWithIcon(icondata: Icons.qr_code_scanner, text: 'Scan'),
+              CardWithIcon(icondata: Icons.account_balance, text: 'Merchant'),
+              CardWithIcon(icondata: Icons.receipt, text: 'Bill'),
+              CardWithIcon(icondata: Icons.more_horiz, text: 'More'),
             ],
           ),
         ],
