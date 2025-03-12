@@ -14,56 +14,59 @@ class _FirstPageState extends State<FirstPage> {
   Widget build(BuildContext context) {
     return Scaffold(
       backgroundColor: Colors.white,
-      appBar: AppBar(
-        leading: const Padding(
-          padding: EdgeInsets.only(left: 15, top: 5, bottom: 5),
-          child: CircleAvatar(
-            radius: 30,
-            backgroundImage: AssetImage("assets/amos1.jpeg"),
-          ),
-        ),
-        title: const Column(
-          children: [
-            Text(
-              "Good Morning",
-              style: TextStyle(fontSize: 20),
+      appBar: PreferredSize(
+        preferredSize: Size.fromHeight(70),
+        child: AppBar(
+          leading: const Padding(
+            padding: EdgeInsets.only(left: 15, top: 5, bottom: 5),
+            child: CircleAvatar(
+              radius: 30,
+              backgroundImage: AssetImage("assets/amos1.jpeg"),
             ),
-            Text(
-              "T.E.C.H_uma",
-              style: TextStyle(fontWeight: FontWeight.bold),
-            )
-          ],
-        ),
-        actions: [
-          Container(
-            width: 80,
-            height: 40,
-            decoration:
-                BoxDecoration(shape: BoxShape.circle, color: Colors.white),
-            child: Stack(
-              children: [
-                Positioned(
-                  bottom: 25,
-                  left: 50,
-                  //  right: 70,
-                  child: Container(
-                    height: 15,
-                    width: 15,
-                    decoration: const BoxDecoration(
-                      color: Colors.red,
-                      shape: BoxShape.circle,
+          ),
+          title: const Column(
+            children: [
+              Text(
+                "Good Morning",
+                style: TextStyle(fontSize: 20),
+              ),
+              Text(
+                "T.E.C.H_uma",
+                style: TextStyle(fontWeight: FontWeight.bold),
+              )
+            ],
+          ),
+          actions: [
+            Container(
+              width: 80,
+              height: 40,
+              decoration:
+                  BoxDecoration(shape: BoxShape.circle, color: Colors.white),
+              child: Stack(
+                children: [
+                  Positioned(
+                    bottom: 25,
+                    left: 50,
+                    //  right: 70,
+                    child: Container(
+                      height: 15,
+                      width: 15,
+                      decoration: const BoxDecoration(
+                        color: Colors.red,
+                        shape: BoxShape.circle,
+                      ),
                     ),
                   ),
-                ),
-                const Positioned(
-                  child: Center(
-                    child: Icon(Icons.notifications),
+                  const Positioned(
+                    child: Center(
+                      child: Icon(Icons.notifications),
+                    ),
                   ),
-                ),
-              ],
+                ],
+              ),
             ),
-          ),
-        ],
+          ],
+        ),
       ),
       body: Column(
         children: [
