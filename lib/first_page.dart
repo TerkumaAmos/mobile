@@ -26,7 +26,7 @@ class _FirstPageState extends State<FirstPage> {
             ),
           ),
         ),
-        title: Text(
+        title: const Text(
           "Hi Stephaine \n Good Morning",
           style: TextStyle(fontSize: 15),
         ),
@@ -161,7 +161,7 @@ class _FirstPageState extends State<FirstPage> {
               CardWithIcon(icondata: Icons.favorite_border, text: 'Assurance'),
             ],
           ),
-          SizedBox(height: 30),
+          SizedBox(height: 40),
           const Row(
             mainAxisAlignment: MainAxisAlignment.spaceEvenly,
             children: [
