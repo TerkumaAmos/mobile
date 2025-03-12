@@ -131,7 +131,7 @@ class _FirstPageState extends State<FirstPage> {
               CardWithIcon(icondata: Icons.qr_code_scanner, text: 'Scan'),
             ],
           ),
-          SizedBox(
+          const SizedBox(
             height: 30,
           ),
           Container(
@@ -145,23 +145,24 @@ class _FirstPageState extends State<FirstPage> {
               ),
             ),
           ),
-          SizedBox(
+          const SizedBox(
             height: 30,
           ),
-          Row(
+          const Row(
             mainAxisAlignment: MainAxisAlignment.spaceEvenly,
             children: [
               CardWithIcon(
-                icondata: Icons.account_balance_wallet,
+                icondata: Icons.lightbulb_outline,
                 text: 'Top Up',
               ),
-              CardWithIcon(icondata: Icons.swap_vert, text: 'Transfer'),
-              CardWithIcon(icondata: Icons.help, text: 'Request'),
-              CardWithIcon(icondata: Icons.qr_code_scanner, text: 'Scan'),
+              CardWithIcon(icondata: Icons.wifi, text: 'Transfer'),
+              CardWithIcon(
+                  icondata: Icons.confirmation_number, text: 'Request'),
+              CardWithIcon(icondata: Icons.favorite_border, text: 'Scan'),
             ],
           ),
           SizedBox(height: 30),
-          Row(
+          const Row(
             mainAxisAlignment: MainAxisAlignment.spaceEvenly,
             children: [
               CardWithIcon(
