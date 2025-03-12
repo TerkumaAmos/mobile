@@ -19,9 +19,9 @@ class _FirstPageState extends State<FirstPage> {
         child: AppBar(
           leadingWidth: 75,
           leading: const Padding(
-            padding: EdgeInsets.only(left: 15, top: -0.5, bottom: -0.5),
+            padding: EdgeInsets.only(left: 15, top: 1, bottom: 1),
             child: CircleAvatar(
-              radius: 35,
+              radius: 30,
               backgroundImage: AssetImage("assets/amos1.jpeg"),
             ),
           ),
