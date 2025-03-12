@@ -17,10 +17,11 @@ class _FirstPageState extends State<FirstPage> {
       appBar: PreferredSize(
         preferredSize: Size.fromHeight(70),
         child: AppBar(
+          leadingWidth: 75,
           leading: const Padding(
             padding: EdgeInsets.only(left: 15, top: 5, bottom: 5),
             child: CircleAvatar(
-              radius: 30,
+              radius: 35,
               backgroundImage: AssetImage("assets/amos1.jpeg"),
             ),
           ),
@@ -40,8 +41,8 @@ class _FirstPageState extends State<FirstPage> {
             Container(
               width: 80,
               height: 40,
-              decoration:
-                  BoxDecoration(shape: BoxShape.circle, color: Colors.white),
+              decoration: const BoxDecoration(
+                  shape: BoxShape.circle, color: Colors.white),
               child: Stack(
                 children: [
                   Positioned(
