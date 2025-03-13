@@ -142,7 +142,7 @@ class _FirstPageState extends State<FirstPage> {
               ],
             ),
           ),
-          SizedBox(height: 30),
+          const SizedBox(height: 30),
           const Row(
             mainAxisAlignment: MainAxisAlignment.spaceEvenly,
             children: [
