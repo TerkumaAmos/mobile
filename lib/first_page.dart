@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+
 import 'package:mobile/colors.dart';
 import 'package:mobile/icons.dart';
 
@@ -10,12 +11,27 @@ class FirstPage extends StatefulWidget {
 }
 
 class _FirstPageState extends State<FirstPage> {
+  int selectedindex = 0;
+
+  List<Widget> widgets = [
+    Text("Home"),
+    Text("Home"),
+    Text("Home"),
+    Text("Home"),
+  ];
+
+  void onTapped(int index) {
+    setState(() {
+      selectedindex = index;
+    });
+  }
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       backgroundColor: Colors.white,
       appBar: PreferredSize(
-        preferredSize: Size.fromHeight(70),
+        preferredSize: const Size.fromHeight(70),
         child: AppBar(
           leadingWidth: 75,
           leading: const Padding(
@@ -182,7 +198,49 @@ class _FirstPageState extends State<FirstPage> {
               CardWithIcon(icondata: Icons.more_horiz, text: 'More'),
             ],
           ),
+          const SizedBox(
+            height: 20,
+          ),
+          Container(
+            padding: EdgeInsets.symmetric(horizontal: 40),
+            alignment: Alignment.centerLeft,
+            child: RichText(
+              text: TextSpan(
+                text: "Monthly Reporting",
+                style: const TextStyle(color: Colors.black),
+                children: [
+                  WidgetSpan(
+                    alignment: PlaceholderAlignment.middle,
+                    child: InkWell(
+                      onTap: () {},
+                      child: const Text(
+                        "                                        See More",
+                        style: TextStyle(
+                            fontWeight: FontWeight.bold,
+                            color: Colors.lightBlue),
+                      ),
+                    ),
+                  )
+                ],
+              ),
+            ),
+          ),
         ],
+      ),
+      bottomNavigationBar: BottomNavigationBar(
+        //   type: BottomNavigationBarType.fixed,
+        items: const [
+          BottomNavigationBarItem(icon: Icon(Icons.home), label: ""),
+          BottomNavigationBarItem(
+              icon: Icon(Icons.account_balance_outlined), label: ''),
+          BottomNavigationBarItem(
+              icon: Icon(Icons.analytics_outlined), label: ''),
+          BottomNavigationBarItem(icon: Icon(Icons.settings), label: ''),
+        ],
+        currentIndex: selectedindex,
+        selectedItemColor: Colors.black,
+        unselectedItemColor: Colors.grey,
+        onTap: onTapped,
       ),
     );
   }
