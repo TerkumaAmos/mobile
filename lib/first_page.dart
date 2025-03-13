@@ -160,7 +160,7 @@ class _FirstPageState extends State<FirstPage> {
           ),
           Container(
             alignment: Alignment.centerLeft,
-            padding: EdgeInsets.symmetric(horizontal: 40),
+            padding: const EdgeInsets.symmetric(horizontal: 40),
             child: const Text(
               'Payment List',
               style: TextStyle(
@@ -185,7 +185,7 @@ class _FirstPageState extends State<FirstPage> {
               CardWithIcon(icondata: Icons.favorite_border, text: 'Assurance'),
             ],
           ),
-          SizedBox(height: 40),
+          const SizedBox(height: 40),
           const Row(
             mainAxisAlignment: MainAxisAlignment.spaceEvenly,
             children: [
@@ -202,7 +202,7 @@ class _FirstPageState extends State<FirstPage> {
             height: 20,
           ),
           Container(
-            padding: EdgeInsets.symmetric(horizontal: 40),
+            padding: const EdgeInsets.symmetric(horizontal: 40),
             alignment: Alignment.centerLeft,
             child: RichText(
               text: TextSpan(
