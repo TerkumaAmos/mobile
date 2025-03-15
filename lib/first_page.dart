@@ -14,10 +14,10 @@ class _FirstPageState extends State<FirstPage> {
   int selectedindex = 0;
 
   List<Widget> widgets = [
-    Text("Home"),
-    Text("Home"),
-    Text("Home"),
-    Text("Home"),
+    const Text("Home"),
+    const Text("Home"),
+    const Text("Home"),
+    const Text("Home"),
   ];
 
   void onTapped(int index) {
