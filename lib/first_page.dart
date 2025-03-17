@@ -92,10 +92,10 @@ class _FirstPageState extends State<FirstPage> {
             decoration: BoxDecoration(
               boxShadow: AppColors.shadows,
               color: AppColors.bgColor,
-              borderRadius: BorderRadius.circular(20),
+              borderRadius: BorderRadius.circular(30),
             ),
             width: 400,
-            height: 150,
+            height: 140,
             child: Stack(
               children: [
                 Positioned(
@@ -142,7 +142,7 @@ class _FirstPageState extends State<FirstPage> {
               ],
             ),
           ),
-          const SizedBox(height: 30),
+          const SizedBox(height: 20),
           const Row(
             mainAxisAlignment: MainAxisAlignment.spaceEvenly,
             children: [
@@ -156,7 +156,7 @@ class _FirstPageState extends State<FirstPage> {
             ],
           ),
           const SizedBox(
-            height: 30,
+            height: 20,
           ),
           Container(
             alignment: Alignment.centerLeft,
@@ -170,7 +170,7 @@ class _FirstPageState extends State<FirstPage> {
             ),
           ),
           const SizedBox(
-            height: 30,
+            height: 20,
           ),
           const Row(
             mainAxisAlignment: MainAxisAlignment.spaceEvenly,
@@ -185,7 +185,7 @@ class _FirstPageState extends State<FirstPage> {
               CardWithIcon(icondata: Icons.favorite_border, text: 'Assurance'),
             ],
           ),
-          const SizedBox(height: 40),
+          const SizedBox(height: 30),
           const Row(
             mainAxisAlignment: MainAxisAlignment.spaceEvenly,
             children: [
@@ -207,7 +207,10 @@ class _FirstPageState extends State<FirstPage> {
             child: RichText(
               text: TextSpan(
                 text: "Monthly Reporting",
-                style: const TextStyle(color: Colors.black),
+                style: const TextStyle(
+                  color: Colors.black,
+                  fontWeight: FontWeight.bold,
+                ),
                 children: [
                   WidgetSpan(
                     alignment: PlaceholderAlignment.middle,
@@ -220,9 +223,91 @@ class _FirstPageState extends State<FirstPage> {
                             color: Colors.lightBlue),
                       ),
                     ),
-                  )
+                  ),
                 ],
               ),
+            ),
+          ),
+          const SizedBox(
+            height: 30,
+          ),
+          Container(
+            height: 90,
+            width: 380,
+            decoration: BoxDecoration(
+              boxShadow: [
+                BoxShadow(
+                  color: Colors.white.withOpacity(0.9), // White shadow
+                  blurRadius: 12, // Blur for softness
+                  spreadRadius: 5.0, // Spread for visibility
+                  offset: const Offset(0, 0), // Centered shadow
+                ),
+                BoxShadow(
+                  color:
+                      Colors.grey.withOpacity(0.4), // Gray shadow for contrast
+                  blurRadius: 5,
+                  spreadRadius: 1,
+                  offset: const Offset(0, 2),
+                )
+              ],
+              borderRadius: BorderRadius.circular(10),
+              color: Colors.white,
+            ),
+            child: Stack(
+              children: [
+                Positioned(
+                  left: -5,
+                  height: 70,
+                  top: 10,
+                  child: Container(
+                    height: 0,
+                    width: 100,
+                    decoration: const BoxDecoration(
+                      shape: BoxShape.circle,
+                      color: Colors.red,
+                    ),
+                    child: const Center(
+                      child: Text(
+                        "25%",
+                        style: TextStyle(
+                          fontWeight: FontWeight.bold,
+                        ),
+                      ),
+                    ),
+                  ),
+                ),
+                const Positioned(
+                  left: 100,
+                  bottom: 30,
+                  child: Column(
+                    children: [
+                      Text(
+                        "Total Saving",
+                        style: TextStyle(
+                          fontWeight: FontWeight.bold,
+                          fontSize: 20,
+                        ),
+                      ),
+                      Text("September 2024")
+                    ],
+                  ),
+                ),
+                Positioned(
+                  left: 270,
+                  bottom: 30,
+                  child: Container(
+                    height: 30,
+                    width: 90,
+                    decoration: BoxDecoration(
+                      color: Colors.lightBlue,
+                      borderRadius: BorderRadius.circular(20),
+                    ),
+                    child: const Center(
+                      child: Text("\$10k"),
+                    ),
+                  ),
+                ),
+              ],
             ),
           ),
         ],
