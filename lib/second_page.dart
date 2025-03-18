@@ -58,14 +58,14 @@ class SecondPage extends StatelessWidget {
                           ),
                         ),
                         Positioned(
-                          left: 400,
+                          left: 300,
                           child: SizedBox(
-                            height: 30,
+                            height: 40,
                             width: 40,
                             child: Image(
                               fit: BoxFit.cover,
                               image: AssetImage(
-                                "assets/credit2.jpeg",
+                                "assets/credit1.jpeg",
                               ),
                             ),
                           ),
